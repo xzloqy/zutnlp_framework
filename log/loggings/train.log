@@ -1,0 +1,32 @@
+--------------------------------------------------------------------------------
+Begin training...
+| epoch   0 | 10.96 ms/batch | loss  0.55 |
+| epoch   0 | 11.46 ms/batch | loss  0.22 |
+| epoch   0 |  9.90 ms/batch | loss  0.14 |
+| epoch   0 | 11.35 ms/batch | loss  0.14 |
+--------------------------------------------------------------------------------
+Evaluating on the valid data
+| end of epoch 0 | valid loss 0.13173455213637728 | accuracy 0.9563621429355635 | micro f1 0.9563621429355635 | macro f1 0.9380055009097654 
+--------------------------------------------------------------------------------
+Begin training...
+| epoch   0 | 10.84 ms/batch | loss  0.55 |
+| epoch   0 | 11.32 ms/batch | loss  0.21 |
+| epoch   0 |  9.60 ms/batch | loss  0.14 |
+| epoch   0 | 11.47 ms/batch | loss  0.14 |
+--------------------------------------------------------------------------------
+Evaluating on the valid data
+| end of epoch 0 | valid loss 0.13319677674536298 | accuracy 0.9565259971612431 | micro f1 0.9565259971612431 | macro f1 0.9378759739333904 
+ Saved model state to 'log/model_param/best.pt' 
+--------------------------------------------------------------------------------
+Evaluating on test data
+ Loaded model state from 'log/model_param/best.pt' 
+| test loss 0.1392631551864471 | test accuracy 0.954838601319574 | test micro f1 0.954838601319574 | test macro f1 0.9372272592025457 
+Saved results state to 'log/model_param/result.txt'
+--------------------------------------------------------------------------------
+Begin training...
+--------------------------------------------------------------------------------
+Begin training...
+--------------------------------------------------------------------------------
+Exiting from training early.
+--------------------------------------------------------------------------------
+Evaluating on test data

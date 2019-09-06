@@ -1,0 +1,8 @@
+variance:
+1.All the name of project and directory structures have been changed to lowercase English
+2.Use upper camel case for class names
+3.Camel case for class methods
+4.Add a base package
+
+Notice:
+The implementation have been tested on Ontonotes 5.0 (see the zutnlp_research/example.py)

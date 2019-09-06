@@ -1,0 +1,7 @@
+<pad>
+<unk>
+[CLS]
+[SEG]
+I
+S
+B

@@ -1,5 +1,5 @@
 #!/usr/bin/env python36
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 # @Time    : 19-8-9 下午3:11
 # @Author  : Xinxin Zhang
 import os
@@ -8,11 +8,10 @@ import torch
 import warnings
 warnings.filterwarnings("ignore")
 
+
 class BaseTrainer(object):
-    def __init__(self,
-             model,optimizer,criterion,
-             train_iter,valid_iter,test_iter,
-             logger,best_param_path, test_result_path, **kw):
+    def __init__(self, model, optimizer, criterion, train_iter, valid_iter,
+                 test_iter, logger, best_param_path, test_result_path, **kw):
         self.model = model
         self.optimizer = optimizer
         self.criterion = criterion
@@ -70,8 +69,8 @@ class BaseTrainer(object):
         """
         with open(self.best_param_path, 'wb') as f:
             self.model = torch.save(self.model, f)
-        self.logger.info(" Saved model state to '{}' ".format(self.best_param_path))
-
+        self.logger.info(" Saved model state to '{}' ".format(
+            self.best_param_path))
 
     def load(self):
         """
@@ -80,6 +79,8 @@ class BaseTrainer(object):
         if os.path.isfile(self.best_param_path):
             with open(self.best_param_path, 'rb') as f:
                 self.model = torch.load(f)
-            self.logger.info(" Loaded model state from '{}' ".format(self.best_param_path))
+            self.logger.info(" Loaded model state from '{}' ".format(
+                self.best_param_path))
         else:
-            self.logger.info(" Invalid model state file: '{}' ".format(self.best_param_path))
+            self.logger.info(" Invalid model state file: '{}' ".format(
+                self.best_param_path))

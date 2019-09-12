@@ -1,10 +1,12 @@
 #!/usr/bin/env python36
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 # @Time    : 19-8-9 下午3:00
 # @Author  : Xinxin Zhang
 """
 base class
 """
+
+
 class DataPreprocessor(object):
     def __init__(self, name, raw_data_path, vocab_path, model_data_path, labeled=True, **kw):
         self.name = name
@@ -59,6 +61,3 @@ class DataPreprocessor(object):
         load_data
         """
         raise NotImplementedError
-
-
-

@@ -39,11 +39,13 @@ class OntonotesDataProcess(DataPreprocessor):
             model_data_path,
             labeled=True,
     ):
-        super().__init__(name=name,
-                         raw_data_path=raw_data_path,
-                         vocab_path=vocab_path,
-                         model_data_path=model_data_path,
-                         labeled=labeled)
+        super().__init__(name, raw_data_path, vocab_path, model_data_path,
+                         labeled)
+        # super().__init__(name=name,
+        #                  raw_data_path=raw_data_path,
+        #                  vocab_path=vocab_path,
+        #                  model_data_path=model_data_path,
+        #                  labeled=labeled)
         self.name = name
         self.raw_data_path = raw_data_path
         self.vocab_path = vocab_path.format(self.name) + '/{}_vocab.txt'

@@ -93,7 +93,7 @@ print('Preparing models...')
 nwords = len(train_corpus.char_level_data['WORD']['vocab'])
 n_tags = len(train_corpus.char_level_data['SEG']['vocab'])
 model = SingleModel(nwords, embed_size, hidden_dim, n_tags)
-model = model.cuda(device=device)
+model = model.cuda(device=device)  # device默认是0
 # model = model.cpu()  # 不使用cuda，只使用cpu
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.CrossEntropyLoss()
